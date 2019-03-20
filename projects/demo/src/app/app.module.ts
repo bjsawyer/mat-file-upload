@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core'
 import { FormsModule } from '@angular/forms'
 import {
   MatButtonModule,
+  MatCardModule,
   MatIconModule,
   MatInputModule,
   MatSelectModule,
@@ -24,6 +25,7 @@ import { AppComponent } from './app.component'
     MatInputModule,
     MatSelectModule,
     FormsModule,
+    MatCardModule,
     MatToolbarModule,
   ],
   providers: [],

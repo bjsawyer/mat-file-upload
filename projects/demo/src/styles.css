@@ -4,7 +4,8 @@ body {
   margin: 0;
 }
 
-.horizontal-padding {
+.app-padding {
   margin-left: 16px;
   margin-right: 16px;
+  margin-top: 16px
 }
