@@ -6,6 +6,7 @@
   "rules": {
     "array-type": false,
     "arrow-parens": false,
+    "semicolon": false,
     "deprecation": {
       "severity": "warn"
     },
