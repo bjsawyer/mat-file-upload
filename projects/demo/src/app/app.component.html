@@ -1,6 +1,7 @@
 <mat-toolbar color="primary">mat-file-upload Demo</mat-toolbar>
 <div class="app-padding">
   <mat-card>
-    <mat-file-upload></mat-file-upload>
+    <mat-file-upload [labelText]="'Select a file (or multiple) to upload:'" [allowMultipleFiles]="true"
+      [showUploadButton]="true"></mat-file-upload>
   </mat-card>
 </div>
