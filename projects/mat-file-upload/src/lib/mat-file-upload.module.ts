@@ -14,7 +14,6 @@ import { MatFileUploadComponent } from './mat-file-upload.component'
   declarations: [MatFileUploadComponent],
   imports: [
     BrowserAnimationsModule,
-    MatFileUploadModule,
     MatButtonModule,
     MatIconModule,
     MatInputModule,
