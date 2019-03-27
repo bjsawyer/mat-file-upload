@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve demo",
-    "build:lib": "ng build mat-file-upload",
+    "build:lib": "npm run copy:readme && ng build mat-file-upload",
     "build:demo": "ng build demo --prod",
     "copy:readme": "cpx README.md projects/mat-file-upload",
     "test": "ng test mat-file-upload",
