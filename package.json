@@ -12,7 +12,6 @@
     "lint": "ng lint mat-file-upload",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~7.2.0",
     "@angular/cdk": "~7.3.5",
