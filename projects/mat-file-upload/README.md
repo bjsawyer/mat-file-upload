@@ -1,24 +1,11 @@
-# MatFileUpload
+# Angular Material File Upload [![Build Status](https://travis-ci.org/bjsawyer/mat-file-upload.svg?branch=master)](https://travis-ci.org/bjsawyer/mat-file-upload)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+This tool is a simple & configurable file upload component for use with [Angular Material](https://material.angular.io/).
 
-## Code scaffolding
+## Live Demo
 
-Run `ng generate component component-name --project mat-file-upload` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project mat-file-upload`.
-> Note: Don't forget to add `--project mat-file-upload` or else it will be added to the default project in your `angular.json` file. 
+https://bjsawyer.github.io/mat-file-upload/
 
-## Build
+## Usage
 
-Run `ng build mat-file-upload` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build mat-file-upload`, go to the dist folder `cd dist/mat-file-upload` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test mat-file-upload` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+TBD
