@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
+    "start": "ng serve demo",
+    "build:lib": "ng build mat-file-upload",
+    "build:demo": "ng build demo",
+    "test": "ng test mat-file-upload",
+    "test:ci": "ng test mat-file-upload --watch=false --browsers=ChromeHeadless",
+    "lint": "ng lint mat-file-upload",
     "e2e": "ng e2e"
   },
   "private": true,
