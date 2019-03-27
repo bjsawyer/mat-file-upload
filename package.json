@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve demo",
-    "build:lib": "ng build mat-file-upload",
-    "build:demo": "ng build demo",
+    "build:lib": "ng build mat-file-upload --prod",
+    "build:demo": "ng build demo --prod",
     "test": "ng test mat-file-upload",
     "test:ci": "ng test mat-file-upload --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint mat-file-upload",
