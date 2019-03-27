@@ -11,7 +11,7 @@ before_script:
 script:
   - npm run lint
   - npm run test:ci
-  - npm run build:demo -- --base-href https://bjsawyer.github.io/mat-file-upload
+  - npm run build:demo -- --base-href https://bjsawyer.github.io/mat-file-upload/
 
 deploy:
   provider: pages
