@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - 'lts/*'
+cache: npm
+jobs:
+  include:
+    - stage: install
+      script: npm ci
+    - stage: unit test
+      script: npm test
