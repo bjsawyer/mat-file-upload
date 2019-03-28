@@ -46,7 +46,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
   ],
 })
 export class MatFileUploadComponent implements OnInit {
-  @Input() labelText: string
+  @Input() labelText = 'Select File(s)'
   @Input() allowMultipleFiles = false
   @Input() showUploadButton = true
   @Output() uploadClicked: EventEmitter<FileList> = new EventEmitter<FileList>()

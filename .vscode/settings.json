@@ -28,5 +28,5 @@
   "beautify.language": {
     "html": ["html"]
   },
-  "editor.mouseWheelZoom": true
+  "editor.mouseWheelZoom": true,
 }

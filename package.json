@@ -1,12 +1,13 @@
 {
   "name": "mat-file-upload",
-  "version": "0.0.5",
   "scripts": {
     "ng": "ng",
     "start": "ng serve demo",
     "build:lib": "npm run copy:readme && ng build mat-file-upload",
     "build:demo": "ng build demo --prod",
     "copy:readme": "cpx README.md projects/mat-file-upload",
+    "pack": "cd dist/mat-file-upload && npm pack",
+    "package": "npm run build:lib && npm run pack",
     "test": "ng test mat-file-upload",
     "test:ci": "ng test mat-file-upload --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint mat-file-upload",
