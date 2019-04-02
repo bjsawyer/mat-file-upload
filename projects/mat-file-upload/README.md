@@ -48,8 +48,8 @@ Advanced:
   [labelText]="'Select a file (or multiple) to upload:'"
   [allowMultipleFiles]="true"
   [showUploadButton]="true"
-  (uploadClicked)="onUploadClicked()"
-  (selectedFilesChanged)="onSelectedFilesChanged()">
+  (uploadClicked)="onUploadClicked($event)"
+  (selectedFilesChanged)="onSelectedFilesChanged($event)">
 </mat-file-upload>
 ```
 
