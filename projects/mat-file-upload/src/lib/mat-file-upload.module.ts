@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core'
 import { FormsModule } from '@angular/forms'
-import {
-  MatButtonModule,
-  MatIconModule,
-  MatInputModule,
-  MatSelectModule,
-} from '@angular/material'
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { MatFileUploadComponent } from './mat-file-upload.component'
