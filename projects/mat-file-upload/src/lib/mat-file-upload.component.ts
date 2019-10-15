@@ -17,9 +17,9 @@ import {
       color="primary"
       class="file-input-button"
       (click)="fileInput.click()"
-      aria-label="Select File(s)"
+      [attr.aria-label]="selectButtonText"
     >
-      <span>Select File(s)</span>
+      <span>{{ selectButtonText }}</span>
       <input
         #fileInput
         type="file"
@@ -35,9 +35,9 @@ import {
       [disabled]="!selectedFiles"
       (click)="uploadFiles()"
       *ngIf="showUploadButton"
-      aria-label="Upload File(s)"
+      [attr.aria-label]="uploadButtonText"
     >
-      Upload
+      {{ uploadButtonText }}
     </button>
     <span class="file-input-text">{{ selectedFileText }}</span>
     <button
@@ -55,6 +55,8 @@ import {
 })
 export class MatFileUploadComponent implements OnInit {
   @Input() labelText = 'Select File(s)'
+  @Input() selectButtonText = 'Select File(s)'
+  @Input() uploadButtonText = 'Upload File(s)'
   @Input() allowMultipleFiles = false
   @Input() showUploadButton = true
   @Output() uploadClicked: EventEmitter<FileList> = new EventEmitter<FileList>()
