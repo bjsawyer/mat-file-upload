@@ -48,6 +48,8 @@ Advanced:
 ```html
 <mat-file-upload
   [labelText]="'Select a file (or multiple) to upload:'"
+  [selectButtonText]="'Choose File(s)'"
+  [uploadButtonText]="'Submit'"
   [allowMultipleFiles]="true"
   [showUploadButton]="true"
   (uploadClicked)="onUploadClicked($event)"
@@ -59,11 +61,13 @@ Advanced:
 
 ### `@Input()` Properties
 
-| Directive              | Type      | Description                                                                  | Default Value    |
-| ---------------------- | --------- | ---------------------------------------------------------------------------- | ---------------- |
-| `[allowMultipleFiles]` | `boolean` | True/false representing whether the user can select multiple files at a time | false            |
-| `[labelText]`          | `string`  | The text to be displayed for the file upload label                           | "Select file(s)" |
-| `[showUploadButton]`   | `boolean` | True/false representing whether the "Upload" button is shown in the DOM      | true             |
+| Directive              | Type      | Description                                                                    | Default Value    |
+| ---------------------- | --------- | ------------------------------------------------------------------------------ | ---------------- |
+| `[labelText]`          | `string`  | The text to be displayed for the file upload label                             | "Select file(s)" |
+| `[selectButtonText]`   | `string`  | The text to be displayed for the button that allows the user to select file(s) | "Select file(s)" |
+| `[uploadButtonText]`   | `string`  | The text to be displayed for the button that allows the user to upload file(s) | "Upload File(s)" |
+| `[allowMultipleFiles]` | `boolean` | True/false representing whether the user can select multiple files at a time   | false            |
+| `[showUploadButton]`   | `boolean` | True/false representing whether the "Upload" button is shown in the DOM        | true             |
 
 ### `@Output()` Properties
 
