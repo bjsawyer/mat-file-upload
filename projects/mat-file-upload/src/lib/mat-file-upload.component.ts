@@ -1,4 +1,12 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core'
 
 @Component({
   selector: 'mat-file-upload',
@@ -52,6 +60,7 @@ export class MatFileUploadComponent implements OnInit {
   @Output() uploadClicked: EventEmitter<FileList> = new EventEmitter<FileList>()
   @Output() selectedFilesChanged: EventEmitter<FileList> = new EventEmitter<FileList>()
 
+  @ViewChild('fileInput', { static: false }) fileInputRef: ElementRef
   selectedFiles: FileList
   selectedFileText = ''
 
@@ -70,10 +79,16 @@ export class MatFileUploadComponent implements OnInit {
           : `${numSelectedFiles} files selected`
     } else {
       this.selectedFileText = ''
+      this.resetFileInput()
     }
   }
 
   uploadFiles(): void {
     this.uploadClicked.emit(this.selectedFiles)
+    this.resetFileInput()
+  }
+
+  resetFileInput(): void {
+    this.fileInputRef.nativeElement.value = ''
   }
 }
