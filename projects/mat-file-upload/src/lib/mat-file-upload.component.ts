@@ -45,7 +45,8 @@ import {
       (click)="filesChanged(null)"
       aria-label="Remove Selected File(s)"
     >
-      <mat-icon>close</mat-icon>
+      <mat-icon *ngIf="!customSvgIcon">close</mat-icon>
+      <mat-icon *ngIf="customSvgIcon" [svgIcon]="customSvgIcon"></mat-icon>
     </button>
   `,
   styles: [
@@ -59,6 +60,7 @@ export class MatFileUploadComponent implements OnInit {
   @Input() uploadButtonText = 'Upload File(s)'
   @Input() allowMultipleFiles = false
   @Input() showUploadButton = true
+  @Input() customSvgIcon?: string = null
   @Output() uploadClicked: EventEmitter<FileList> = new EventEmitter<FileList>()
   @Output() selectedFilesChanged: EventEmitter<FileList> = new EventEmitter<FileList>()
 
