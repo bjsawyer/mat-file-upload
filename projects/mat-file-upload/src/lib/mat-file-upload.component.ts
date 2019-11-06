@@ -24,6 +24,7 @@ import {
         #fileInput
         type="file"
         style="display: none"
+        [accept]="acceptedTypes"
         [multiple]="allowMultipleFiles"
         (change)="filesChanged($event.target.files)"
       />
@@ -60,6 +61,7 @@ export class MatFileUploadComponent implements OnInit {
   @Input() uploadButtonText = 'Upload File(s)'
   @Input() allowMultipleFiles = false
   @Input() showUploadButton = true
+  @Input() acceptedTypes = '*.*'
   @Input() customSvgIcon?: string = null
   @Output() uploadClicked: EventEmitter<FileList> = new EventEmitter<FileList>()
   @Output() selectedFilesChanged: EventEmitter<FileList> = new EventEmitter<FileList>()
@@ -68,9 +70,9 @@ export class MatFileUploadComponent implements OnInit {
   selectedFiles: FileList
   selectedFileText = ''
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   filesChanged(files?: FileList): void {
     this.selectedFiles = files
