@@ -53,6 +53,7 @@ Advanced:
   [allowMultipleFiles]="true"
   [showUploadButton]="true"
   [customSvgIcon]="'close_custom'"
+  [acceptedTypes]="'.png, .jpg, .jpeg'"
   (uploadClicked)="onUploadClicked($event)"
   (selectedFilesChanged)="onSelectedFilesChanged($event)"
 >
@@ -71,6 +72,7 @@ Advanced:
 | `[allowMultipleFiles]` | `boolean` | True/false representing whether the user can select multiple files at a time                                   | false            |
 | `[showUploadButton]`   | `boolean` | True/false representing whether the "Upload" button is shown in the DOM                                        | true             |
 | `[customSvgIcon]`      | `string`  | The name of the custom svgIcon to be used as the "close" button; otherwise defaults to Material's "close" icon | null             |
+| `[acceptedTypes]`      | `string`  | The list of file types that are allowed to be uploaded                                                         | "\*.\*"          |
 
 ### `@Output()` Properties
 
