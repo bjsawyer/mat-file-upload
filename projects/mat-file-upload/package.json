@@ -15,8 +15,8 @@
   "homepage": "https://bjsawyer.github.io/mat-file-upload/",
   "license": "SEE LICENSE IN LICENSE.txt",
   "peerDependencies": {
-    "@angular/common": "^7.2.0",
-    "@angular/core": "^7.2.0",
-    "@angular/material": "^7.3.5"
+    "@angular/common": "~8.2.7",
+    "@angular/core": "~8.2.7",
+    "@angular/material": "~8.2.7"
   }
 }
