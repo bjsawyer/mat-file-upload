@@ -45,6 +45,7 @@ import {
     <button
       mat-icon-button
       (click)="filesChanged(null)"
+      type="button"
       aria-label="Remove Selected File(s)"
     >
       <mat-icon *ngIf="!customSvgIcon">close</mat-icon>
