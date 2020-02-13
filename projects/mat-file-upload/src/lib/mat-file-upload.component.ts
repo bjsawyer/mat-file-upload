@@ -3,7 +3,6 @@ import {
   ElementRef,
   EventEmitter,
   Input,
-  OnInit,
   Output,
   ViewChild,
 } from '@angular/core'
@@ -14,6 +13,7 @@ import {
     <span class="file-input-text">{{ labelText }}</span>
     <button
       mat-button
+      [type]="selectFilesButtonType"
       color="primary"
       class="file-input-button"
       (click)="fileInput.click()"
@@ -31,6 +31,7 @@ import {
     </button>
     <button
       mat-raised-button
+      [type]="uploadButtonType"
       color="primary"
       class="file-input-button"
       [disabled]="!selectedFiles"
@@ -55,24 +56,22 @@ import {
     '.file-input-text { font-size: 14px !important; margin-right: 8px !important }',
   ],
 })
-export class MatFileUploadComponent implements OnInit {
-  @Input() labelText = 'Select File(s)'
-  @Input() selectButtonText = 'Select File(s)'
-  @Input() uploadButtonText = 'Upload File(s)'
-  @Input() allowMultipleFiles = false
-  @Input() showUploadButton = true
-  @Input() acceptedTypes = '*.*'
-  @Input() customSvgIcon?: string = null
-  @Output() uploadClicked: EventEmitter<FileList> = new EventEmitter<FileList>()
-  @Output() selectedFilesChanged: EventEmitter<FileList> = new EventEmitter<FileList>()
+export class MatFileUploadComponent {
+  @Input() labelText = 'Select File(s)';
+  @Input() selectButtonText = 'Select File(s)';
+  @Input() selectFilesButtonType: 'button' | 'menu' | 'reset' | 'submit' = 'button';
+  @Input() uploadButtonText = 'Upload File(s)';
+  @Input() uploadButtonType: 'button' | 'menu' | 'reset' | 'submit' = 'button';
+  @Input() allowMultipleFiles = false;
+  @Input() showUploadButton = true;
+  @Input() acceptedTypes = '*.*';
+  @Input() customSvgIcon?: string = null;
+  @Output() uploadClicked: EventEmitter<FileList> = new EventEmitter<FileList>();
+  @Output() selectedFilesChanged: EventEmitter<FileList> = new EventEmitter<FileList>();
 
   @ViewChild('fileInput', { static: false }) fileInputRef: ElementRef
-  selectedFiles: FileList
-  selectedFileText = ''
-
-  constructor() { }
-
-  ngOnInit() { }
+  selectedFiles: FileList;
+  selectedFileText = '';
 
   filesChanged(files?: FileList): void {
     this.selectedFiles = files
