@@ -49,7 +49,9 @@ Advanced:
 <mat-file-upload
   [labelText]="'Select a file (or multiple) to upload:'"
   [selectButtonText]="'Choose File(s)'"
+  [selectFilesButtonType]="button"
   [uploadButtonText]="'Submit'"
+  [uploadButtonType]="submit"
   [allowMultipleFiles]="true"
   [showUploadButton]="true"
   [customSvgIcon]="'close_custom'"
@@ -64,15 +66,17 @@ Advanced:
 
 ### `@Input()` Properties
 
-| Directive              | Type      | Description                                                                                                    | Default Value    |
-| ---------------------- | --------- | -------------------------------------------------------------------------------------------------------------- | ---------------- |
-| `[labelText]`          | `string`  | The text to be displayed for the file upload label                                                             | "Select file(s)" |
-| `[selectButtonText]`   | `string`  | The text to be displayed for the button that allows the user to select file(s)                                 | "Select file(s)" |
-| `[uploadButtonText]`   | `string`  | The text to be displayed for the button that allows the user to upload file(s)                                 | "Upload File(s)" |
-| `[allowMultipleFiles]` | `boolean` | True/false representing whether the user can select multiple files at a time                                   | false            |
-| `[showUploadButton]`   | `boolean` | True/false representing whether the "Upload" button is shown in the DOM                                        | true             |
-| `[customSvgIcon]`      | `string`  | The name of the custom svgIcon to be used as the "close" button; otherwise defaults to Material's "close" icon | null             |
-| `[acceptedTypes]`      | `string`  | The list of file types that are allowed to be uploaded                                                         | "\*.\*"          |
+| Directive                 | Type      | Description                                                                                                    | Default Value    |
+| ------------------------- | --------- | -------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `[labelText]`             | `string`  | The text to be displayed for the file upload label                                                             | "Select file(s)" |
+| `[selectButtonText]`      | `string`  | The text to be displayed for the button that allows the user to select file(s)                                 | "Select file(s)" |
+| `[selectFilesButtonType]` | `string`  | The HTML "type" attribute of the "Select Files" button                                                         | "button"         |
+| `[uploadButtonText]`      | `string`  | The text to be displayed for the button that allows the user to upload file(s)                                 | "Upload File(s)" |
+| `[uploadButtonType]`      | `string`  | The HTML "type" attribute of the "Upload" button                                                               | "button"         |
+| `[allowMultipleFiles]`    | `boolean` | True/false representing whether the user can select multiple files at a time                                   | false            |
+| `[showUploadButton]`      | `boolean` | True/false representing whether the "Upload" button is shown in the DOM                                        | true             |
+| `[customSvgIcon]`         | `string`  | The name of the custom svgIcon to be used as the "close" button; otherwise defaults to Material's "close" icon | null             |
+| `[acceptedTypes]`         | `string`  | The list of file types that are allowed to be uploaded                                                         | "\*.\*"          |
 
 ### `@Output()` Properties
 
