@@ -6,7 +6,7 @@ describe('MatFileUploadService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: MatFileUploadService = TestBed.get(MatFileUploadService);
+    const service: MatFileUploadService = TestBed.inject(MatFileUploadService);
     expect(service).toBeTruthy();
   });
 });
