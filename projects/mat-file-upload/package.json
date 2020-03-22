@@ -1,6 +1,6 @@
 {
   "name": "mat-file-upload",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A simple & configurable Angular Material file upload component.",
   "keywords": [
     "Angular",
@@ -15,8 +15,8 @@
   "homepage": "https://bjsawyer.github.io/mat-file-upload/",
   "license": "SEE LICENSE IN LICENSE.txt",
   "peerDependencies": {
-    "@angular/common": "~8.2.7",
-    "@angular/core": "~8.2.7",
-    "@angular/material": "~8.2.7"
+    "@angular/common": ">= 8.0.0",
+    "@angular/core": ">= 8.0.0",
+    "@angular/material": ">= 8.0.0"
   }
 }
