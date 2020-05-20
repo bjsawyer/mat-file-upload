@@ -47,11 +47,10 @@ import {
       (click)="filesChanged(null)"
       type="button"
       aria-label="Remove Selected File(s)"
+       *ngIf="selectedFiles != null && selectedFiles.length > 0"
     >
-      <ng-container *ngIf="selectedFiles != null && selectedFiles.length > 0">
         <mat-icon *ngIf="!customSvgIcon">close</mat-icon>
         <mat-icon *ngIf="customSvgIcon" [svgIcon]="customSvgIcon"></mat-icon>
-      </ng-container>
     </button>
   `,
   styles: [
