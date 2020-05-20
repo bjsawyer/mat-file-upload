@@ -71,7 +71,7 @@ export class MatFileUploadComponent {
   @Output() uploadClicked: EventEmitter<FileList> = new EventEmitter<FileList>();
   @Output() selectedFilesChanged: EventEmitter<FileList> = new EventEmitter<FileList>();
 
-  @ViewChild('fileInput', { static: false }) fileInputRef: ElementRef
+  @ViewChild('fileInput') fileInputRef: ElementRef
   selectedFiles: FileList;
   selectedFileText = '';
 
