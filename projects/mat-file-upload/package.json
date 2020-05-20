@@ -1,6 +1,6 @@
 {
   "name": "mat-file-upload",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "A simple & configurable Angular Material file upload component.",
   "keywords": [
     "Angular",
