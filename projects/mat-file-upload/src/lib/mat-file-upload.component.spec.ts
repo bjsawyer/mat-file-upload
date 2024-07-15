@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing'
+import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { MatIconModule } from '@angular/material/icon'
 
 import { MatFileUploadComponent } from './mat-file-upload.component'
@@ -7,12 +7,12 @@ describe('MatFileUploadComponent', () => {
   let component: MatFileUploadComponent
   let fixture: ComponentFixture<MatFileUploadComponent>
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [MatFileUploadComponent],
       imports: [MatIconModule],
     }).compileComponents()
-  }))
+  })
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MatFileUploadComponent)
