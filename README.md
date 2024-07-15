@@ -1,4 +1,5 @@
-# Angular Material File Upload ![npm](https://img.shields.io/npm/v/mat-file-upload) [![Build Status](https://travis-ci.org/bjsawyer/mat-file-upload.svg?branch=master)](https://travis-ci.org/bjsawyer/mat-file-upload)
+# Angular Material File Upload ![npm](https://img.shields.io/npm/v/mat-file-upload) ![Build](https://img.shields.io/github/actions/workflow/status/bjsawyer/mat-file-upload/deploy.yml)
+
 
 This tool is a simple & configurable file upload component for use with [Angular Material](https://material.angular.io/).
 
