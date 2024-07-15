@@ -5,10 +5,10 @@ import {
   Input,
   Output,
   ViewChild,
-} from "@angular/core";
+} from '@angular/core'
 
 @Component({
-  selector: "mat-file-upload",
+  selector: 'mat-file-upload',
   template: `
     <span class="file-input-text">{{ labelText }}</span>
     <button
@@ -74,46 +74,45 @@ import {
   ],
 })
 export class MatFileUploadComponent {
-  @Input() labelText = "Select File(s)";
-  @Input() selectButtonText = "Select File(s)";
-  @Input() selectFilesButtonType: "button" | "menu" | "reset" | "submit" =
-    "button";
-  @Input() uploadButtonText = "Upload File(s)";
-  @Input() uploadButtonType: "button" | "menu" | "reset" | "submit" = "button";
-  @Input() allowMultipleFiles = false;
-  @Input() showUploadButton = true;
-  @Input() acceptedTypes = "*.*";
-  @Input() customSvgIcon?: string = null;
-  @Output() uploadClicked: EventEmitter<FileList> =
-    new EventEmitter<FileList>();
+  @Input() labelText = 'Select File(s)'
+  @Input() selectButtonText = 'Select File(s)'
+  @Input() selectFilesButtonType: 'button' | 'menu' | 'reset' | 'submit' =
+    'button'
+  @Input() uploadButtonText = 'Upload File(s)'
+  @Input() uploadButtonType: 'button' | 'menu' | 'reset' | 'submit' = 'button'
+  @Input() allowMultipleFiles = false
+  @Input() showUploadButton = true
+  @Input() acceptedTypes = '*.*'
+  @Input() customSvgIcon?: string = null
+  @Output() uploadClicked: EventEmitter<FileList> = new EventEmitter<FileList>()
   @Output() selectedFilesChanged: EventEmitter<FileList> =
-    new EventEmitter<FileList>();
+    new EventEmitter<FileList>()
 
-  @ViewChild("fileInput") fileInputRef: ElementRef;
-  selectedFiles: FileList;
-  selectedFileText = "";
+  @ViewChild('fileInput') fileInputRef: ElementRef
+  selectedFiles: FileList
+  selectedFileText = ''
 
   filesChanged(files?: FileList): void {
-    this.selectedFiles = files;
-    this.selectedFilesChanged.emit(this.selectedFiles);
+    this.selectedFiles = files
+    this.selectedFilesChanged.emit(this.selectedFiles)
     if (this.selectedFiles) {
-      const numSelectedFiles = this.selectedFiles.length;
+      const numSelectedFiles = this.selectedFiles.length
       this.selectedFileText =
         numSelectedFiles === 1
           ? this.selectedFiles[0].name
-          : `${numSelectedFiles} files selected`;
+          : `${numSelectedFiles} files selected`
     } else {
-      this.selectedFileText = "";
-      this.resetFileInput();
+      this.selectedFileText = ''
+      this.resetFileInput()
     }
   }
 
   uploadFiles(): void {
-    this.uploadClicked.emit(this.selectedFiles);
-    this.resetFileInput();
+    this.uploadClicked.emit(this.selectedFiles)
+    this.resetFileInput()
   }
 
   resetFileInput(): void {
-    this.fileInputRef.nativeElement.value = "";
+    this.fileInputRef.nativeElement.value = ''
   }
 }
