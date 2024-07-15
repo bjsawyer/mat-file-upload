@@ -146,7 +146,6 @@
       }
     }
   },
-  "defaultProject": "mat-file-upload",
   "cli": {
     "analytics": false
   }
