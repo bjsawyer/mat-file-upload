@@ -5,7 +5,7 @@ This tool is a simple & configurable file upload component for use with [Angular
 
 Live Demo: https://bjsawyer.github.io/mat-file-upload/
 
-<img width="552" alt="Screen Shot 2019-04-24 at 8 40 27 PM" src="https://user-images.githubusercontent.com/8974594/56702301-472f7000-66d1-11e9-9480-1e5145ce7dde.png">
+<img width="493" alt="Screenshot 2024-07-15 at 5 06 27 PM" src="https://github.com/user-attachments/assets/aa8deb75-8f93-47ef-abcd-42f9b2ede008">
 
 ## Prerequisites
 
