@@ -1,0 +1,34 @@
+name: Build and Deploy Demo
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+
+      - name: NPM Install
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm run test:ci
+
+      - name: Build
+        run: npm run build:demo -- --base-href https://bjsawyer.github.io/mat-file-upload/
+
+      - name: Deploy
+        run: npx angular-cli-ghpages --dir=dist/demo
+        env:
+          CI: true
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
