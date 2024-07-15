@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - master
+
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy-demo:
     runs-on: ubuntu-latest
@@ -14,6 +18,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 22
+
+      - name: Setup Git
+        run: |
+          git config --global user.name "github-bot"
+          git config --global user.email "github-bot@noreply.github.com"
 
       - name: NPM Install
         run: npm ci
