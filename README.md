@@ -50,9 +50,9 @@ Advanced:
 <mat-file-upload
   [labelText]="'Select a file (or multiple) to upload:'"
   [selectButtonText]="'Choose File(s)'"
-  [selectFilesButtonType]="button"
+  [selectFilesButtonType]="'button'"
   [uploadButtonText]="'Submit'"
-  [uploadButtonType]="submit"
+  [uploadButtonType]="'submit'"
   [allowMultipleFiles]="true"
   [showUploadButton]="true"
   [customSvgIcon]="'close_custom'"
